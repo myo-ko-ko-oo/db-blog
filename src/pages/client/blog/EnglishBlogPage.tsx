@@ -1,4 +1,6 @@
+import { Icons } from "@/components/icons";
 import EnglishBlogCard from "@/components/layout/blog/EnglishBlogCard";
+import { engPosts } from "@/data/englishPosts";
 
 import {
   Select,
@@ -14,16 +16,10 @@ const EnglishBlogPage = () => {
     <>
       <div className="">
         <span className="flex gap-4 py-8 items-center ">
-          {/* <Avatar>
-            <AvatarImage className="w-26" src="https://github.com/shadcn.png" />
-          </Avatar> */}
-          <img
-            className="rounded-full size-16"
-            src="https://github.com/shadcn.png"
-            alt=""
-          />
+          <Icons.EnglishFlag className="rounded-xl object-fill w-16 h-12" />
           <div className="">
             <h2 className="text-lg font-bold">English Articles</h2>
+            <Separator className="my-2" />
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
               ad obcaecati eos sed fugit aut. a architecto?
@@ -54,7 +50,7 @@ const EnglishBlogPage = () => {
 
         {/* Blog Card Section */}
 
-        <EnglishBlogCard />
+        <EnglishBlogCard engPosts={engPosts} />
       </div>
     </>
   );

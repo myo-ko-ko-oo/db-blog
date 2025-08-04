@@ -29,7 +29,7 @@ const MobileNavbar = () => {
                   className="mr-2 size-8 text-teal-600"
                   aria-hidden="true"
                 />
-                <span className="font-bold">{siteConfig.name}</span>
+                <span className="font-bold text-lg">{siteConfig.name}</span>
                 <span className="sr-only">Home</span>
               </Link>
             </SheetClose>
@@ -41,7 +41,7 @@ const MobileNavbar = () => {
                   </Link>
                 </SheetClose>
               </div>
-              <Accordion type="multiple" className="w-2/3">
+              <Accordion type="multiple" className="w-full">
                 <AccordionItem value="item-1">
                   <AccordionTrigger className="text-base">
                     Blogs

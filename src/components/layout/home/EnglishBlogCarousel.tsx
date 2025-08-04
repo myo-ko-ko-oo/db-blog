@@ -24,7 +24,7 @@ const EnglishBlogCarousel = () => {
   return (
     <>
       <div className="px-10">
-        <h2 className="text-lg font-bold my-4">You May Also Like</h2>
+        <h2 className="text-lg font-bold py-8">You May Also Like</h2>
         <Carousel
           plugins={[
             Autoplay({
@@ -36,11 +36,11 @@ const EnglishBlogCarousel = () => {
             loop: true,
           }}
         >
-          <CarouselContent className="gap-4">
-            <CarouselItem className="md:basis-1/2 lg:basis-1/3 bg-red-400 h-24">
+          <CarouselContent className="gap-4 pb-8">
+            <CarouselItem className="md:basis-1/2 lg:basis-1/3 bg-red-400 h-40 ">
               1
             </CarouselItem>
-            <CarouselItem className="md:basis-1/2 lg:basis-1/3 bg-purple-400">
+            <CarouselItem className="md:basis-1/2 lg:basis-1/3 bg-purple-400 h-40">
               2
             </CarouselItem>
             <CarouselItem className="md:basis-1/2 lg:basis-1/3 bg-indigo-400">

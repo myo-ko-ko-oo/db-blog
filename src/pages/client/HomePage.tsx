@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
-import DoctorImage from "@/assets/doctorImage.PNG"
+import DoctorImage from "../../assets/doctorImage.PNG";
 import { Icons } from "@/components/icons";
 import { Link } from "react-router";
 import EnglishBlogCarousel from "@/components/layout/home/EnglishBlogCarousel";
@@ -32,10 +32,10 @@ const HomePage = () => {
           />
         </section>
       </div>
-      <div className="mt-6 grid grid-cols-1 lg:grid-cols-3 lg:bg-slate-100  rounded-xl p-8 space-y-4 lg:space-y-0 dark:bg-slate-950 dark:text-white">
+      <div className="mt-6 grid grid-cols-1 lg:grid-cols-3 lg:bg-slate-100  rounded-xl lg:p-8 space-y-4 lg:space-y-0 dark:bg-slate-950 dark:text-white">
         <Link to={"blog/english"} className="rounded-lg">
-          <div className="bg-slate-100 p-6 rounded-lg lg:rounded-none flex gap-4 items-center  lg:border-r-2 border-gray-400 dark:bg-slate-900 dark:lg:bg-slate-950">
-            <Icons.paperPlane className="size-12 rounded-md bg-slate-200 text-teal-800 border shadow p-2" />
+          <div className="bg-slate-100 p-6  rounded-lg lg:rounded-none flex gap-4 items-center  lg:border-r-2 border-gray-400 dark:bg-slate-900 dark:lg:bg-slate-950">
+            <Icons.EnglishFlag className="w-14 h-12 object-cover rounded-xl bg-slate-200 text-teal-800 border shadow p-2" />
             <span>
               <p className="font-semibold">English Articels</p>
               <small>this is eng articels ffdsf fdsf</small>
@@ -44,7 +44,7 @@ const HomePage = () => {
         </Link>
         <Link to={"blog/burmese"} className="">
           <div className="bg-slate-100 flex gap-4 items-center p-6 rounded-lg lg:rounded-none lg:border-r-2 border-gray-400 dark:bg-slate-900 dark:lg:bg-slate-950">
-            <Icons.layers className="size-12 rounded-md bg-slate-200 text-teal-800 border shadow p-2" />
+            <Icons.BurmeseFlag className="w-14 h-12 rounded-xl bg-slate-200 text-teal-800 border shadow p-2" />
             <span>
               <p className="font-semibold">Burmese Articels</p>
               <small>this is eng articels ffdsf fdsf</small>
@@ -53,7 +53,7 @@ const HomePage = () => {
         </Link>
         <Link to={"blog/video"} className="">
           <div className="bg-slate-100 flex gap-4 items-center p-6 rounded-lg lg:rounded-none dark:bg-slate-900 dark:lg:bg-slate-950">
-            <Icons.Video className="size-12 rounded-md bg-slate-200 text-teal-800 border shadow p-2" />
+            <Icons.Video className="w-14 h-12  rounded-md bg-slate-200 text-red-600 border shadow p-2" />
             <span>
               <p className="font-semibold">Video Contents</p>
               <small>this is eng articels ffdsf fdsf</small>

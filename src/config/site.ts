@@ -12,28 +12,28 @@ export const siteConfig = {
   links,
   mainNav: [
     {
-      title: "Products",
-      card: [
-        {
-          title: "Wooden",
-          href: "/products?categories=1",
-          description: "comfortable with Wooden furniture.",
-        },
-        {
-          title: "Bamboo",
-          href: "/products?categories=2",
-          description: "Build your own Bamboo furniture.",
-        },
-        {
-          title: "Metal",
-          href: "/products?categories=3",
-          description: "Buy our latest metal furniture.",
-        },
-      ],
+      // title: "Products",
+      // card: [
+      //   {
+      //     title: "Wooden",
+      //     href: "/products?categories=1",
+      //     description: "comfortable with Wooden furniture.",
+      //   },
+      //   {
+      //     title: "Bamboo",
+      //     href: "/products?categories=2",
+      //     description: "Build your own Bamboo furniture.",
+      //   },
+      //   {
+      //     title: "Metal",
+      //     href: "/products?categories=3",
+      //     description: "Buy our latest metal furniture.",
+      //   },
+      // ],
       menu: [
         {
-          title: "Services",
-          href: "services",
+          title: "Home",
+          href: "/",
         },
         {
           title: "Blog",
@@ -43,35 +43,39 @@ export const siteConfig = {
           title: "About Us",
           href: "about",
         },
+        {
+          title: "Contact",
+          href: "contact",
+        },
       ],
     },
   ],
   footerNav: [
     {
-      title: "Furniture Types",
+      title: "Diabetes Types",
       items: [
         {
-          title: "Seating",
+          title: "Type 1 Diabetes",
           href: "/types/seating",
           external: true,
         },
         {
-          title: "Lying",
+          title: "Type 2 Diabetes",
           href: "/types/lying",
           external: true,
         },
         {
-          title: "Entertainment",
+          title: "Gestational Diabetes",
           href: "/types/entertainment",
           external: true,
         },
         {
-          title: "Tables",
+          title: "Prediabetes ",
           href: "/types/tables",
           external: true,
         },
         {
-          title: "Storage",
+          title: "Other Rare Types",
           href: "/types/storage",
           external: true,
         },

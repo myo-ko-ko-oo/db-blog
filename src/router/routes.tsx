@@ -3,6 +3,7 @@ import ContactPage from "@/pages/client/ContactPage";
 import HomePage from "@/pages/client/HomePage";
 import NotFoundPage from "@/pages/client/NotFoundPage";
 import RootLayout from "@/pages/client/RootLayout";
+import BlogDetailPage from "@/pages/client/blog/BlogDetailPage";
 import BlogRootLayout from "@/pages/client/blog/BlogRootLayout";
 import BurmeseBlogPage from "@/pages/client/blog/BurmeseBlogPage";
 import EnglishBlogPage from "@/pages/client/blog/EnglishBlogPage";
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
           {
             path: "video",
             Component: VideoBlogPage,
+          },
+          {
+            path: "detail/:type/:id",
+            Component: BlogDetailPage,
           },
         ],
       },

@@ -1,3 +1,5 @@
+import { mmPosts } from "./../data/burmesePost";
+import { engPosts } from "./../data/englishPosts";
 export interface NavItem {
   title: string;
   href?: string;
@@ -33,17 +35,25 @@ export type Tag = {
   name: string;
 };
 
-export type Post = {
+export type engPost = {
   id: number;
-  author: {
-    fullName: string;
-  };
+  author: string;
   title: string;
-  content: string;
   image: string;
+  type: string;
   body: string;
-  updatedAt: string;
-  tags: Tag[];
+  updated_at: string;
+  categories: string[];
+};
+export type mmPost = {
+  id: number;
+  author: string;
+  title: string;
+  image: string;
+  type: string;
+  body: string;
+  updated_at: string;
+  categories: string[];
 };
 
 export type Category = {
