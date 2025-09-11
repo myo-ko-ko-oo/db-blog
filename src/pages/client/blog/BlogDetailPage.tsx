@@ -4,14 +4,10 @@ import { mmPosts } from "@/data/burmesePost";
 import { Icons } from "@/components/icons";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-// import type { engPost } from "@/types";
-
-// import { mmPost, engPost } from "@/types";
 
 const BlogDetailPage = () => {
   const { type, id } = useParams();
-  console.log(id, "id");
-  console.log(type);
+
   let detailPost;
   if (type === "eng") {
     detailPost = engPosts.find((post) => post.id === Number(id));
@@ -35,7 +31,7 @@ const BlogDetailPage = () => {
             </Button>
             {detailPost ? (
               <>
-                <h2 className="mb-3 text-3xl font-extrabold">
+                <h2 className="mb-3 text-3xl font-extrabold leading-relaxed">
                   {detailPost.title}
                 </h2>
                 <div className="text-sm mb-2">

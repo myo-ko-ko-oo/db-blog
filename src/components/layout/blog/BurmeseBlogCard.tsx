@@ -23,11 +23,11 @@ const BurmeseBlogCard = ({ mmPosts }: BurmeseBlogCardProps) => {
                   loading="lazy"
                   alt="blog-image"
                 />
-                <h2 className="line-clamp-1 font-semibold text-xl mt-2 px-3">
+                <h2 className="line-clamp-1 font-semibold text-xl mt-2 px-3 leading-relaxed">
                   {post.title}
                 </h2>
                 <div
-                  className="prose max-w-none my-4 line-clamp-4 px-3"
+                  className="prose max-w-none mb-4 line-clamp-3 px-3 leading-relaxed"
                   dangerouslySetInnerHTML={{ __html: post.body }}
                 />
                 <span className="flex gap-2.5 pb-4 items-center">
