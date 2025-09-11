@@ -1,5 +1,5 @@
-import { mmPosts } from "./../data/burmesePost";
-import { engPosts } from "./../data/englishPosts";
+
+
 export interface NavItem {
   title: string;
   href?: string;
