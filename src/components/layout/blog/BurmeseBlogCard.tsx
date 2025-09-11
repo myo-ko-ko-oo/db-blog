@@ -2,13 +2,13 @@ import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router";
 import type { mmPost } from "@/types";
-import { mmPosts } from "@/data/burmesePost";
+
 
 type BurmeseBlogCardProps = {
   mmPosts: mmPost[];
 };
 
-const BurmeseBlogCard = ({ engPosts }: BurmeseBlogCardProps) => {
+const BurmeseBlogCard = ({ mmPosts }: BurmeseBlogCardProps) => {
   return (
     <>
       {" "}
