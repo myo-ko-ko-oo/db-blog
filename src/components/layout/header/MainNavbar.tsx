@@ -15,17 +15,21 @@ const MainNavbar = () => {
     <>
       <div className="hidden lg:block">
         <NavigationMenu viewport={false}>
-          <NavigationMenuList>
+          <NavigationMenuList className="gap-3">
             <NavigationMenuItem>
               <NavigationMenuLink
                 asChild
-                className={navigationMenuTriggerStyle()}
+                className={`${
+                  (navigationMenuTriggerStyle(), "dark:bg-slate-700")
+                }`}
               >
                 <Link to={"/"}>Home</Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuTrigger>Blogs</NavigationMenuTrigger>
+              <NavigationMenuTrigger className="dark:bg-slate-700">
+                Blogs
+              </NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid w-[300px] gap-4">
                   <li>
@@ -60,7 +64,9 @@ const MainNavbar = () => {
             <NavigationMenuItem>
               <NavigationMenuLink
                 asChild
-                className={navigationMenuTriggerStyle()}
+                className={`${
+                  (navigationMenuTriggerStyle(), "dark:bg-slate-700")
+                }`}
               >
                 <Link to={"/about"}>About us</Link>
               </NavigationMenuLink>
@@ -68,7 +74,9 @@ const MainNavbar = () => {
             <NavigationMenuItem>
               <NavigationMenuLink
                 asChild
-                className={navigationMenuTriggerStyle()}
+                className={`${
+                  (navigationMenuTriggerStyle(), "dark:bg-slate-700")
+                }`}
               >
                 <Link to={"/contact"}>Contact</Link>
               </NavigationMenuLink>

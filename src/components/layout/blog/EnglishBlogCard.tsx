@@ -13,7 +13,7 @@ const EnglishBlogCard = ({ engPosts }: EnglishBlogCardProps) => {
       {engPosts.length > 0 ? (
         engPosts.map((post) => (
           <Link to={`/blog/detail/${post.type}/${post.id}`} key={post.id}>
-            <Card className="py-0 px-3 border-none shadow-none hover:shadow-md transition-all duration-200">
+            <Card className="py-0 dark:bg-slate-800  border-none shadow-none hover:shadow-md transition-all duration-200">
               <img
                 src={post.image}
                 className="w-full rounded-xl object-cover h-[220px]"
@@ -21,11 +21,11 @@ const EnglishBlogCard = ({ engPosts }: EnglishBlogCardProps) => {
                 loading="lazy"
                 alt="blog-image"
               />
-              <h2 className="line-clamp-1 font-semibold text-xl mt-2">
+              <h2 className="line-clamp-1 font-semibold text-xl mt-2 px-3">
                 {post.title}
               </h2>
               <div
-                className="prose max-w-none my-4 line-clamp-4"
+                className="prose max-w-none my-4 line-clamp-4 px-3"
                 dangerouslySetInnerHTML={{ __html: post.body }}
               />
               <span className="flex gap-2.5 pb-4 items-center">

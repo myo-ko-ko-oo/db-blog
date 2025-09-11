@@ -9,6 +9,11 @@
     "typeRoots": ["./src/types", "./node_modules/@types"],
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "jsx": "react-jsx", // ✅ important
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowJs": true,
+    "module": "esnext"
   }
 }

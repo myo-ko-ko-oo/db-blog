@@ -4,7 +4,7 @@ export const mmPosts = [
     author: "Dr. Aye Aye Moe",
     title: "Type 1 ဆီးချိုရောဂါ",
     image:
-      "https://previews.123rf.com/images/dvarg/dvarg1804/dvarg180400040/99509701-banner-with-symbol-of-diabetes-type-one-awareness-realistic-ribbon-design-template-for-websites.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa9_fMdHC_cMrphYWtssySVPSczrJisAWcHg&s",
     type: "mm",
     body: `
         <div>
