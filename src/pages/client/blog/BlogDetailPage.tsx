@@ -4,9 +4,13 @@ import { mmPosts } from "@/data/burmesePost";
 import { Icons } from "@/components/icons";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import { useEffect } from "react";
 
 const BlogDetailPage = () => {
   const { type, id } = useParams();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   let detailPost;
   if (type === "eng") {
@@ -14,14 +18,13 @@ const BlogDetailPage = () => {
   } else if (type === "mm") {
     detailPost = mmPosts.find((post) => post.id === Number(id));
   }
-  console.log(detailPost, "post");
 
   return (
     <>
       <div className="container mx-auto px-4 lg:px-0">
         <section className="flex flex-col lg:flex-row">
           <section className="w-full lg:w-3/4 lg:pr-16">
-            <Button variant="outline" asChild className="mb-6 mt-8">
+            <Button variant="outline" asChild className="mb-6 mt-6">
               <Link
                 to={`${type === "eng" ? "/blog/english" : "/blog/burmese"}`}
               >

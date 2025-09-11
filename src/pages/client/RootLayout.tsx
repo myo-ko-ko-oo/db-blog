@@ -8,9 +8,9 @@ import { Outlet } from "react-router";
 const RootLayout = () => {
   return (
     <>
-      <div className="dark:bg-slate-900">
+      <div className="dark:bg-slate-900 overflow-hidden">
         <Header />
-        <div className="container mx-auto overflow-hidden px-2 lg:px-0 min-h-screen">
+        <div className="container mx-auto  px-2 lg:px-0 min-h-screen">
           <Outlet />
         </div>
         <FooterSection />
