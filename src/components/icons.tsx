@@ -20,6 +20,11 @@ import BurmeseFlag from "@/assets/myanmar-flag.png";
 import EnglishFlag from "@/assets/english-flag.png";
 import { LuPanelLeftOpen } from "react-icons/lu";
 import { FaRegUser } from "react-icons/fa6";
+import { FaEnvelopeOpenText } from "react-icons/fa6";
+// import { FaPhoneVolume } from "react-icons/fa6";
+import { FaMapLocationDot } from "react-icons/fa6";
+import { FcSmartphoneTablet } from "react-icons/fc";
+import { FcSms } from "react-icons/fc";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
@@ -76,6 +81,10 @@ export const Icons = {
   home: HomeIcon,
   openMenu: LuPanelLeftOpen,
   user: FaRegUser,
+  sentEmail: FaEnvelopeOpenText,
+  phone: FcSmartphoneTablet,
+  address: FaMapLocationDot,
+  contact: FcSms,
   paperPlane: PaperPlaneIcon,
   exclamation: ExclamationTriangleIcon,
   arrowLeft: ArrowLeftIcon,

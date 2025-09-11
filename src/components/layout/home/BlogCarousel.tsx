@@ -25,7 +25,7 @@ export function Example() {
 const BlogCarousel = () => {
   return (
     <>
-      <div className="px-10">
+      <div className="px-12 ">
         <h2 className="text-lg font-bold py-8">You May Also Like</h2>
         <Carousel
           plugins={[
@@ -38,17 +38,17 @@ const BlogCarousel = () => {
             loop: true,
           }}
         >
-          <CarouselContent className="gap-4 pb-8">
+          <CarouselContent className="gap-3 mx-2  mb-8">
             {engPosts.map((post, i) => (
-              <CarouselItem key={i} className="md:basis-1/2 lg:basis-1/3  h-24">
+              <CarouselItem key={i} className="md:basis-1/2 lg:basis-1/3 h-24 ">
                 <Link to={`/blog/detail/${post.type}/${post.id}`}>
-                  <section className="grid grid-cols-3 rounded-md gap-2.5 p-2  dark:bg-slate-800">
+                  <section className="grid grid-cols-3  rounded-md gap-2.5 pt-4 px-2 shadow-md  dark:bg-slate-800">
                     <img
                       src={post.image}
                       alt="post_image"
                       loading="lazy"
                       decoding="async"
-                      className="w-full rounded-md h-24"
+                      className="w-full rounded-md h-20"
                     />
 
                     <div className="col-span-2">
@@ -56,7 +56,7 @@ const BlogCarousel = () => {
                         {post.title}
                       </p>
                       <div
-                        className="prose max-w-none line-clamp-3 text-xs my-4"
+                        className="prose max-w-none line-clamp-3 text-xs mt-4 mb-3"
                         dangerouslySetInnerHTML={{ __html: post.body }}
                       />
                     </div>
