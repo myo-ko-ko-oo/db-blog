@@ -1,5 +1,3 @@
-declare module "@fontsource/poppins";
-declare module "@fontsource/poppins/*";
 export interface NavItem {
   title: string;
   href?: string;

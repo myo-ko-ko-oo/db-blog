@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
-import DoctorImage from "@/assets/doctorImage.PNG";
+import DoctorImage from "../../data/images/doctorImage.png";
 import { Icons } from "@/components/icons";
 import { Link } from "react-router";
 import BlogCarousel from "@/components/layout/home/BlogCarousel";
