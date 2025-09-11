@@ -1,6 +1,6 @@
 import {
   HomeIcon,
-  HamburgerMenuIcon,
+  // HamburgerMenuIcon,
   PaperPlaneIcon,
   ExclamationTriangleIcon,
   ArrowLeftIcon,
@@ -18,6 +18,8 @@ import {
 } from "@radix-ui/react-icons";
 import BurmeseFlag from "@/assets/myanmar-flag.png";
 import EnglishFlag from "@/assets/english-flag.png";
+import { LuPanelLeftOpen } from "react-icons/lu";
+import { FaRegUser } from "react-icons/fa6";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
@@ -72,7 +74,8 @@ export const Icons = {
     />
   ),
   home: HomeIcon,
-  menu: HamburgerMenuIcon,
+  openMenu: LuPanelLeftOpen,
+  user: FaRegUser,
   paperPlane: PaperPlaneIcon,
   exclamation: ExclamationTriangleIcon,
   arrowLeft: ArrowLeftIcon,

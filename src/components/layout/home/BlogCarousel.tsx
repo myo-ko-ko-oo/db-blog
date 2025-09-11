@@ -20,7 +20,7 @@ export function Example() {
     </Carousel>
   );
 }
-const EnglishBlogCarousel = () => {
+const BlogCarousel = () => {
   return (
     <>
       <div className="px-10">
@@ -59,4 +59,4 @@ const EnglishBlogCarousel = () => {
   );
 };
 
-export default EnglishBlogCarousel;
+export default BlogCarousel;

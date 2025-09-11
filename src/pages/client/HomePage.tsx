@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
-import DoctorImage from "../../assets/doctorImage.PNG";
+import DoctorImage from "@/assets/doctorImage.PNG";
 import { Icons } from "@/components/icons";
 import { Link } from "react-router";
-import EnglishBlogCarousel from "@/components/layout/home/EnglishBlogCarousel";
+import BlogCarousel from "@/components/layout/home/BlogCarousel";
 
 const HomePage = () => {
   return (
@@ -61,7 +61,7 @@ const HomePage = () => {
           </div>
         </Link>
       </div>
-      <EnglishBlogCarousel />
+      <BlogCarousel />
     </>
   );
 };

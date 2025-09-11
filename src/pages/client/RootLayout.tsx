@@ -7,7 +7,7 @@ const RootLayout = () => {
     <>
       <div>
         <Header />
-        <div className="container mx-auto px-2 lg:px-0 min-h-screen">
+        <div className="container mx-auto overflow-hidden px-2 lg:px-0 min-h-screen">
           <Outlet />
         </div>
         <FooterSection />

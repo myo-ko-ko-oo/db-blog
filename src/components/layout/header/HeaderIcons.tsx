@@ -1,6 +1,6 @@
 import { Icons } from "@/components/icons";
 import { ModeToggle } from "@/components/mode-toggle";
-import { Avatar, AvatarImage } from "@/components/ui/avatar";
+
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -17,10 +17,7 @@ const HeaderIcons = () => {
         <ModeToggle />
         <DropdownMenu>
           <DropdownMenuTrigger>
-            {" "}
-            <Avatar>
-              <AvatarImage src="https://github.com/shadcn.png" />
-            </Avatar>
+            <Icons.user className=" mx-2 text-teal-600 dark:text-white" />
           </DropdownMenuTrigger>
           <DropdownMenuContent>
             <DropdownMenuLabel>My Account</DropdownMenuLabel>

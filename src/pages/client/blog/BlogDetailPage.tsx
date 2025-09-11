@@ -26,7 +26,9 @@ const BlogDetailPage = () => {
         <section className="flex flex-col lg:flex-row">
           <section className="w-full lg:w-3/4 lg:pr-16">
             <Button variant="outline" asChild className="mb-6 mt-8">
-              <Link to="/">
+              <Link
+                to={`${type === "eng" ? "/blog/english" : "/blog/burmese"}`}
+              >
                 <Icons.arrowLeft />
                 All Posts
               </Link>

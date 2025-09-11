@@ -20,7 +20,7 @@ const MobileNavbar = () => {
       <div className="lg:hidden flex items-center">
         <Sheet>
           <SheetTrigger>
-            <Icons.menu className="size-6" />
+            <Icons.openMenu className="size-6 text-gray-600 dark:text-gray-200" />
           </SheetTrigger>
           <SheetContent side="left" className="pt-9 px-6">
             <SheetClose asChild>
