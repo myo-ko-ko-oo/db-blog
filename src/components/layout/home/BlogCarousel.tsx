@@ -45,11 +45,10 @@ const BlogCarousel = () => {
                   <section className="grid grid-cols-3 rounded-md gap-2.5 p-2  dark:bg-slate-800">
                     <img
                       src={post.image}
-                      alt="blog post"
+                      alt="post_image"
                       loading="lazy"
                       decoding="async"
                       className="w-full rounded-md h-24"
-                      alt=""
                     />
 
                     <div className="col-span-2">
