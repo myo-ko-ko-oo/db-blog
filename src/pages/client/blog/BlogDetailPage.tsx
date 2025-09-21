@@ -54,7 +54,7 @@ const BlogDetailPage = () => {
                   className="w-full rounded-xl"
                 />
                 <div
-                  className="prose max-w-none my-4"
+                  className="prose max-w-none leading-relaxed my-6"
                   dangerouslySetInnerHTML={{ __html: detailPost.body }}
                 />
                 <div className="mb-12 space-x-2">

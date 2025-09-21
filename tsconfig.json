@@ -10,7 +10,7 @@
     "paths": {
       "@/*": ["./src/*"]
     },
-    "jsx": "react-jsx", // ✅ important
+    "jsx": "react-jsx",
     "moduleResolution": "node",
     "esModuleInterop": true,
     "allowJs": true,
