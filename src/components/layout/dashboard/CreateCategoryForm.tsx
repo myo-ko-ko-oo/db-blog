@@ -1,7 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
-import { useActionData, useNavigation, useSubmit } from "react-router";
+import {
+  useActionData,
+  useNavigation,
+  //  useSubmit
+} from "react-router";
 import { Icons } from "@/components/icons";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -38,9 +42,9 @@ const CreateCategoryForm = () => {
       language: "ENG",
     },
   });
-  const submit = useSubmit();
+  // const submit = useSubmit();
   const handelRegister = (value: z.infer<typeof nameSchema>) => {
-    // console.log(value.language);
+    console.log(value.language);
     // submit(value, { method: "post", action: "." });
   };
   return (

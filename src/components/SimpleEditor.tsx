@@ -19,6 +19,7 @@ export default function SimpleEditor({
 }: // darkMode,
 SimpleEditorProps) {
   const [update, setUpdate] = useState(false); // force re-render
+  console.log(update);
 
   const editor = useEditor({
     extensions: [

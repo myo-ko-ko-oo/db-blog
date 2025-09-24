@@ -6,7 +6,11 @@ import SimpleEditor from "@/components/SimpleEditor";
 import usePostStore from "@/store/PostStore";
 import { Icons } from "@/components/icons";
 import { Button } from "@/components/ui/button";
-import { useActionData, useNavigation, useSubmit } from "react-router";
+import {
+  useActionData,
+  useNavigation,
+  //  useSubmit
+} from "react-router";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -81,7 +85,7 @@ const CreateArticleForm = () => {
     setSelectedCategories(updated);
     setCategories(updated.map((c) => ({ id: c.id })));
   };
-  const submit = useSubmit();
+  // const submit = useSubmit();
   const handelRegister = (value: z.infer<typeof titleSchema>) => {
     if (selectedCategories.length <= 0) {
       setClientError("At least one category is required!");
@@ -89,6 +93,8 @@ const CreateArticleForm = () => {
     }
 
     setClientError(null);
+    console.log(value);
+
     // submit(value, { method: "post", action: "." });
   };
 
