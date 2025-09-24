@@ -30,7 +30,7 @@ const EnglishBlogPage = () => {
 
         {/* Filter section */}
         <section className="flex justify-between py-8 ">
-          <h2 className="text-lg font-bold">Recent blog posts</h2>
+          <h2 className="text-lg font-bold">Recent blog articles</h2>
           <div className="flex gap-4">
             <span className="">
               <Select>

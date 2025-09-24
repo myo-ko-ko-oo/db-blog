@@ -1,100 +1,155 @@
 import { Icons } from "@/components/icons";
+import { SidebarProvider } from "@/components/ui/sidebar";
 import { Link } from "react-router";
 import {
   Sheet,
   SheetClose,
   SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { ScrollArea } from "@/components/ui/scroll-area";
+
 import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+  SidebarGroup,
+  SidebarGroupLabel,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
+  SidebarMenuSub,
+  SidebarMenuSubButton,
+} from "@/components/ui/sidebar";
+import {
+  Collapsible,
+  CollapsibleTrigger,
+  CollapsibleContent,
+} from "@radix-ui/react-collapsible";
+import { ChevronRight } from "lucide-react";
 import { siteConfig } from "@/config/site";
+
 const MobileNavbar = () => {
   return (
     <>
-      <div className="lg:hidden flex items-center">
+      <div>
         <Sheet>
           <SheetTrigger>
-            <Icons.openMenu className="size-6 text-gray-600 dark:text-gray-200" />
+            <Icons.openMenu className="size-5 mt-2 lg:hidden text-gray-500 dark:text-gray-200" />
           </SheetTrigger>
-          <SheetContent side="left" className="pt-9 px-6">
+          <SheetTitle className="sr-only">Main Navigation</SheetTitle>
+          <SheetDescription className="sr-only">Medical Blog</SheetDescription>
+          <SheetContent side="left" className=" px-2 w-2/3">
             <SheetClose asChild>
-              <Link to="/" className="flex items-center">
-                <Icons.logo
-                  className="mr-2 size-8 text-teal-600"
-                  aria-hidden="true"
-                />
-                <span className="font-bold text-lg">{siteConfig.name}</span>
-                <span className="sr-only">Home</span>
-              </Link>
+              <SheetHeader>
+                <Link to="/" className="flex items-center">
+                  <Icons.logo
+                    className="mr-2 size-8 text-teal-600"
+                    aria-hidden="true"
+                  />
+                  <span className="font-bold text-lg">{siteConfig.name}</span>
+                  <span className="sr-only">Home</span>
+                </Link>
+              </SheetHeader>
             </SheetClose>
-            <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-8">
-              <div className="mt-4 flex flex-col space-y-2">
-                <SheetClose asChild>
-                  <Link to={"/"} className="text-base">
-                    Home
-                  </Link>
-                </SheetClose>
-              </div>
-              <Accordion type="multiple" className="w-full">
-                <AccordionItem value="item-1">
-                  <AccordionTrigger className="text-base">
-                    Blogs
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    <div className="flex flex-col space-y-2 pl-2">
-                      <SheetClose asChild>
-                        <Link
-                          to={"/blog/english"}
-                          className="text-foreground/70"
-                        >
-                          English Articles
-                        </Link>
-                      </SheetClose>
-                    </div>
-                  </AccordionContent>
-                  <AccordionContent>
-                    <div className="flex flex-col space-y-2 pl-2">
-                      <SheetClose asChild>
-                        <Link
-                          to={"/blog/burmese"}
-                          className="text-foreground/70"
-                        >
-                          Burmese Articles
-                        </Link>
-                      </SheetClose>
-                    </div>
-                  </AccordionContent>
-                  <AccordionContent>
-                    <div className="flex flex-col space-y-2 pl-2">
-                      <SheetClose asChild>
-                        <Link to={"/blog/video"} className="text-foreground/70">
-                          videos
-                        </Link>
-                      </SheetClose>
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
-              <div className="mt-3 flex flex-col space-y-2">
-                <SheetClose asChild>
-                  <Link to={"about"} className="text-base">
-                    About us
-                  </Link>
-                </SheetClose>
-              </div>
-              <div className="mt-4 flex flex-col space-y-2">
-                <SheetClose asChild>
-                  <Link to={"contact"} className="text-base">
-                    Contact
-                  </Link>
-                </SheetClose>
-              </div>
+
+            <ScrollArea className=" h-[calc(100vh-8rem)] ">
+              <SidebarProvider>
+                <SidebarGroup>
+                  <SidebarGroupLabel>Medical Blog</SidebarGroupLabel>
+                  <SidebarMenu className="space-y-2 ">
+                    <SheetClose asChild>
+                      <Link to={"/"}>
+                        <SidebarMenuItem>
+                          <SidebarMenuButton className="dark:hover:bg-slate-700">
+                            <Icons.home className="size-6" />
+                            Home
+                          </SidebarMenuButton>
+                        </SidebarMenuItem>
+                      </Link>
+                    </SheetClose>
+
+                    <Collapsible className="group/collapsible ">
+                      <CollapsibleTrigger asChild>
+                        <SidebarMenuItem>
+                          <SidebarMenuButton
+                            className="dark:hover:bg-slate-700 w-full"
+                            tooltip="sestting"
+                          >
+                            <Icons.article className="size-4" />
+                            Blog
+                            <ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
+                          </SidebarMenuButton>
+                        </SidebarMenuItem>
+                      </CollapsibleTrigger>
+
+                      <CollapsibleContent>
+                        <SheetClose asChild>
+                          <SidebarMenuSubButton asChild>
+                            <Link to={"/blog/english"}>
+                              <SidebarMenuSub>
+                                <span>
+                                  <Icons.EnglishFlag className="w-4 h-3 inline me-2" />
+                                  English Articles
+                                </span>
+                              </SidebarMenuSub>
+                            </Link>
+                          </SidebarMenuSubButton>
+                        </SheetClose>
+
+                        <SheetClose asChild>
+                          <SidebarMenuSubButton asChild>
+                            <Link to={"/blog/burmese"}>
+                              <SidebarMenuSub>
+                                <span>
+                                  <Icons.BurmeseFlag className="w-4 inline me-2" />
+                                  Burmese Articles
+                                </span>
+                              </SidebarMenuSub>
+                            </Link>
+                          </SidebarMenuSubButton>
+                        </SheetClose>
+
+                        <SheetClose asChild>
+                          <SidebarMenuSubButton asChild>
+                            <Link to={"/blog/video"}>
+                              <SidebarMenuSub>
+                                <span>
+                                  <Icons.Video className="size-4 inline me-2" />
+                                  videos
+                                </span>
+                              </SidebarMenuSub>
+                            </Link>
+                          </SidebarMenuSubButton>
+                        </SheetClose>
+                      </CollapsibleContent>
+                    </Collapsible>
+
+                    <SheetClose asChild>
+                      <Link to={"about"}>
+                        <SidebarMenuItem>
+                          <SidebarMenuButton className="dark:hover:bg-slate-700">
+                            <Icons.category className="size-4" />
+                            About Us
+                          </SidebarMenuButton>
+                        </SidebarMenuItem>
+                      </Link>
+                    </SheetClose>
+                    <SheetClose asChild>
+                      <Link to={"contact"}>
+                        <SidebarMenuItem>
+                          <SidebarMenuButton className="dark:hover:bg-slate-700">
+                            <Icons.article className="size-4" />
+                            Contact
+                          </SidebarMenuButton>
+                        </SidebarMenuItem>
+                      </Link>
+                    </SheetClose>
+
+                    {/* Blog Collap */}
+                  </SidebarMenu>
+                </SidebarGroup>
+              </SidebarProvider>
             </ScrollArea>
           </SheetContent>
         </Sheet>

@@ -25,6 +25,8 @@ import { FaEnvelopeOpenText } from "react-icons/fa6";
 import { FaMapLocationDot } from "react-icons/fa6";
 import { FcSmartphoneTablet } from "react-icons/fc";
 import { FcSms } from "react-icons/fc";
+import { MdOutlineCategory } from "react-icons/md";
+import { MdOutlineArticle } from "react-icons/md";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
@@ -95,6 +97,8 @@ export const Icons = {
   heart: HeartIcon,
   heartFill: HeartFilledIcon,
   dashboard: DashboardIcon,
+  category: MdOutlineCategory,
+  article: MdOutlineArticle,
   gear: GearIcon,
   exit: ExitIcon,
   trash: TrashIcon,

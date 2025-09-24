@@ -38,17 +38,17 @@ const BlogCarousel = () => {
             loop: true,
           }}
         >
-          <CarouselContent className="gap-3 mx-2  mb-8">
+          <CarouselContent className="gap-3 md:mx-2  mb-8">
             {engPosts.map((post, i) => (
               <CarouselItem key={i} className="md:basis-1/2 lg:basis-1/3 h-24 ">
                 <Link to={`/blog/detail/${post.type}/${post.id}`}>
-                  <section className="grid grid-cols-3  rounded-md gap-2.5 pt-4 px-2 shadow-md  dark:bg-slate-800">
+                  <section className="grid grid-cols-3  rounded-md gap-2.5 pt-4 px-1 md:px-2 shadow-md  dark:bg-slate-800">
                     <img
                       src={post.image}
                       alt="post_image"
                       loading="lazy"
                       decoding="async"
-                      className="w-full rounded-md h-20"
+                      className="w-full rounded-md h-20 z-10"
                     />
 
                     <div className="col-span-2">

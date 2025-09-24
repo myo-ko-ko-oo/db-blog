@@ -7,29 +7,13 @@ const links = {
 
 export const siteConfig = {
   name: "Diabetes Blog",
+  subTitle: "Welcome to diabetes blog",
+  title: "Medical Knowledge and Everything You Need to Know",
   description:
     "Diabetes Blog is your trusted source for tips, news, and support on living with diabetes. From healthy recipes and lifestyle advice to the latest treatment updates, we help you take control and live well every day.",
   links,
   mainNav: [
     {
-      // title: "Products",
-      // card: [
-      //   {
-      //     title: "Wooden",
-      //     href: "/products?categories=1",
-      //     description: "comfortable with Wooden furniture.",
-      //   },
-      //   {
-      //     title: "Bamboo",
-      //     href: "/products?categories=2",
-      //     description: "Build your own Bamboo furniture.",
-      //   },
-      //   {
-      //     title: "Metal",
-      //     href: "/products?categories=3",
-      //     description: "Buy our latest metal furniture.",
-      //   },
-      // ],
       menu: [
         {
           title: "Home",

@@ -8,7 +8,7 @@ import "@fontsource/poppins/400-italic.css";
 const RootLayout = () => {
   return (
     <>
-      <div className="dark:bg-slate-900 overflow-hidden">
+      <div className="dark:bg-slate-900 scroll-auto overflow-hidden">
         <Header />
         <div className="container mx-auto mt-16 md:mt-20  px-2 lg:px-0 min-h-screen">
           <Outlet />

@@ -10,10 +10,8 @@ const HomePage = () => {
     <>
       <div className="grid grid-cols-1 lg:grid-cols-2">
         <section className=" space-y-6 place-content-center text-center lg:text-start px-2 lg:px-0 my-6 lg:my-0">
-          <Button variant={"outline"}>Welcome to diabetes blog</Button>
-          <h1 className="text-4xl font-extrabold">
-            Medical Knowledge and Everything You Need to Know
-          </h1>
+          <Button variant={"outline"}>{siteConfig.subTitle}</Button>
+          <h1 className="text-4xl font-extrabold">{siteConfig.title}</h1>
           <p>{siteConfig.description}</p>
           <div className="flex gap-4 items-center justify-center lg:justify-start">
             <Button className="bg-teal-700 dark:text-white">
@@ -38,7 +36,7 @@ const HomePage = () => {
             <Icons.EnglishFlag className="w-14 h-12 object-cover rounded-xl bg-slate-200 text-teal-800 border shadow p-2" />
             <span>
               <p className="font-semibold">English Articels</p>
-              <small>this is eng articels ffdsf fdsf</small>
+              <small>This is english articels section</small>
             </span>
           </div>
         </Link>
@@ -47,7 +45,7 @@ const HomePage = () => {
             <Icons.BurmeseFlag className="w-14 h-12 rounded-xl bg-slate-200 text-teal-800 border shadow p-2" />
             <span>
               <p className="font-semibold">Burmese Articels</p>
-              <small>this is eng articels ffdsf fdsf</small>
+              <small>This is burmese articels section</small>
             </span>
           </div>
         </Link>
@@ -56,7 +54,7 @@ const HomePage = () => {
             <Icons.Video className="w-14 h-12  rounded-md bg-slate-200 text-red-600 border shadow p-2" />
             <span>
               <p className="font-semibold">Video Contents</p>
-              <small>this is eng articels ffdsf fdsf</small>
+              <small>This is video contents section</small>
             </span>
           </div>
         </Link>

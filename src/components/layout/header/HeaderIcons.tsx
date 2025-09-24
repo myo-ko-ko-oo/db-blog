@@ -9,8 +9,11 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import useProfileStore from "@/store/ProfileStore";
+import { Link } from "react-router";
 
 const HeaderIcons = () => {
+  const { role } = useProfileStore();
   return (
     <>
       <div className="flex gap-4">
@@ -22,23 +25,30 @@ const HeaderIcons = () => {
           <DropdownMenuContent>
             <DropdownMenuLabel>My Account</DropdownMenuLabel>
             <DropdownMenuSeparator />
+            {role && role === "USER" ? (
+              <></>
+            ) : (
+              <>
+                <Link to={"/dashboard"}>
+                  <DropdownMenuItem>
+                    <Icons.dashboard className="size-5 " />
+                    Dashboard
+                  </DropdownMenuItem>
+                </Link>
+              </>
+            )}
+            <Link to={"/profile"}>
+              <DropdownMenuItem>
+                <Icons.heartFill className="size-5 " />
+                Profile
+              </DropdownMenuItem>
+            </Link>
             <DropdownMenuItem>
-              {" "}
-              <Icons.dashboard className="size-5 text-teal-600" />
-              Dashboard
-            </DropdownMenuItem>
-            <DropdownMenuItem>
-              {" "}
-              <Icons.heartFill className="size-5 text-teal-600" />
-              Profile
-            </DropdownMenuItem>
-            <DropdownMenuItem>
-              {" "}
-              <Icons.gear className="size-5 text-teal-600" />
+              <Icons.gear className="size-5 0" />
               setting
             </DropdownMenuItem>
             <DropdownMenuItem>
-              <Icons.exit className="size-5 text-teal-600" />
+              <Icons.exit className="size-5 " />
               Logout
             </DropdownMenuItem>
           </DropdownMenuContent>
